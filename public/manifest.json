@@ -32,12 +32,5 @@
     "photo",
     "utilities",
     "entertainment"
-  ],
-  "screenshots": [
-    {
-      "src": "/demo/blocks-color.png",
-      "sizes": "1280x720",
-      "type": "image/png"
-    }
   ]
 }
