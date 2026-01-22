@@ -61,19 +61,19 @@ const CameraControls = ({
                 </button>
             </div>
 
-            <div className="pointer-events-auto flex items-end justify-center gap-8 md:gap-12 px-4">
+            <div className="pointer-events-auto flex items-end justify-center gap-10 md:gap-14 px-4">
                 <button
                     onClick={handleFlip}
-                    className="group flex flex-col items-center gap-1.5 focus:outline-none"
+                    className="group flex flex-col items-center gap-2 focus:outline-none"
                 >
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-green-500/30 bg-black/40 backdrop-blur flex items-center justify-center group-hover:bg-green-900/30 group-hover:border-green-400 transition-all">
+                    <div className="w-16 h-16 md:w-18 md:h-18 rounded-full border-2 border-green-500/40 bg-black/60 backdrop-blur-md flex items-center justify-center group-hover:bg-green-900/40 group-hover:border-green-400 group-hover:shadow-lg group-hover:shadow-green-500/20 transition-all duration-200">
                         <RefreshCw
-                            size={22}
-                            strokeWidth={1.5}
-                            className={`text-white transition-transform duration-600  ${isFlipping ? 'rotate-180' : ''}`}
+                            size={24}
+                            strokeWidth={1.8}
+                            className={`text-white transition-transform duration-600 ${isFlipping ? 'rotate-180' : ''}`}
                         />
                     </div>
-                    <span className="text-[9px] md:text-[10px] tracking-widest font-bold opacity-70 group-hover:opacity-100 text-white">
+                    <span className="text-[9px] md:text-[10px] tracking-widest font-bold opacity-70 group-hover:opacity-100 text-white transition-opacity">
                         FLIP
                     </span>
                 </button>
