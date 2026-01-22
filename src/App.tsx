@@ -21,6 +21,7 @@ function App() {
         colorMode: false,
         invert: false,
         characterSet: 'standard',
+        color: '#00ff00',
     }
 
     const [stream, setStream] = useState<MediaStream | null>(null)

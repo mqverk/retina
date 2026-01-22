@@ -85,7 +85,7 @@ const AsciiView = forwardRef<AsciiRendererHandle, AsciiViewProps>(
                     if (settings.colorMode) {
                         tempCtx.fillStyle = `rgb(${r},${g},${b})`
                     } else {
-                        tempCtx.fillStyle = settings.invert ? '#000000' : '#00ff00'
+                        tempCtx.fillStyle = settings.invert ? '#000000' : settings.color
                     }
 
                     tempCtx.fillText(char, xPos, yPos)
@@ -197,7 +197,13 @@ const AsciiView = forwardRef<AsciiRendererHandle, AsciiViewProps>(
                 const pixels = hiddenCtx.getImageData(0, 0, srcW, srcH).data
 
                 const brightnessMap = createBrightnessMap(ramp)
-                const { contrast, brightness: brightnessOffset, colorMode, invert } = settings
+                const {
+                    contrast,
+                    brightness: brightnessOffset,
+                    colorMode,
+                    invert,
+                    color,
+                } = settings
 
                 // draw ASCII on the visible canvas
                 canvas.width = srcW * fontScale
@@ -206,7 +212,7 @@ const AsciiView = forwardRef<AsciiRendererHandle, AsciiViewProps>(
                 ctx.fillRect(0, 0, canvas.width, canvas.height)
                 ctx.font = `${fontScale}px 'Fira Code', monospace`
 
-                ctx.fillStyle = invert ? '#00ff00' : '#000000'
+                ctx.fillStyle = invert ? color : '#000000'
                 if (!invert) ctx.fillStyle = '#000000'
                 ctx.textBaseline = 'top'
 
@@ -236,7 +242,7 @@ const AsciiView = forwardRef<AsciiRendererHandle, AsciiViewProps>(
                     if (colorMode) {
                         ctx.fillStyle = `rgb(${r},${g},${b})`
                     } else {
-                        ctx.fillStyle = invert ? '#000000' : '#00ff00'
+                        ctx.fillStyle = invert ? '#000000' : color
                     }
 
                     ctx.fillText(char, x, y)

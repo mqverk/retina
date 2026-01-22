@@ -6,6 +6,7 @@ export interface AsciiSettings {
     colorMode: boolean
     invert: boolean
     characterSet: 'standard' | 'simple' | 'blocks' | 'matrix' | 'edges'
+    color: string
 }
 
 export interface AsciiCharacterMap {

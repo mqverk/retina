@@ -167,6 +167,46 @@ function Settings({ settings, onChange }: SettingsCompProps) {
                         </div>
                     </section>
 
+                    <section>
+                        <p className="uppercase text-xs text-green-400 font-semibold mb-3">
+                            ASCII Color
+                        </p>
+                        <div className="flex items-center gap-3">
+                            <input
+                                type="color"
+                                value={settings.color}
+                                onChange={e => handleChange('color', e.target.value)}
+                                className="w-full h-12 rounded-md cursor-pointer border-2 border-green-500 bg-black"
+                                style={{ colorScheme: 'dark' }}
+                            />
+                            <div className="flex-1 text-green-400 text-sm font-mono">
+                                {settings.color.toUpperCase()}
+                            </div>
+                        </div>
+                        <div className="flex gap-2 mt-3 flex-wrap">
+                            {[
+                                '#00ff00',
+                                '#ff0000',
+                                '#0000ff',
+                                '#ffff00',
+                                '#ff00ff',
+                                '#00ffff',
+                                '#ffffff',
+                            ].map(color => (
+                                <button
+                                    key={color}
+                                    onClick={() => handleChange('color', color)}
+                                    className="w-8 h-8 rounded border-2 transition-all hover:scale-110"
+                                    style={{
+                                        backgroundColor: color,
+                                        borderColor: settings.color === color ? '#22c55e' : '#333',
+                                    }}
+                                    aria-label={`Set color to ${color}`}
+                                />
+                            ))}
+                        </div>
+                    </section>
+
                     <section className="space-y-4 pt-2">
                         {[
                             { key: 'colorMode', label: 'Color Mode' },
