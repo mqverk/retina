@@ -233,18 +233,18 @@ function App() {
 
             {/* Error Toast */}
             {error && (
-                <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-black/80 border border-red-500 px-6 py-4 rounded text-red-500 font-bold backdrop-blur animate-in zoom-in duration-200">
+                <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-black/90 border-2 border-red-500 px-8 py-6 rounded-xl text-red-500 font-bold backdrop-blur-md shadow-2xl shadow-red-500/30 animate-in zoom-in duration-200">
                     <button
                         onClick={() => setError(null)}
-                        className="absolute top-3 right-3 text-red-500 hover:text-red-400 text-xl leading-none"
+                        className="absolute top-4 right-4 text-red-500 hover:text-red-400 transition-colors text-xl leading-none"
                         aria-label="Close error"
                     >
                         <MdCancel />
                     </button>
 
                     <div>
-                        <h1 className="text-4xl mb-4">SYSTEM ERROR</h1>
-                        <p>{error}</p>
+                        <h1 className="text-4xl mb-4 tracking-wider">SYSTEM ERROR</h1>
+                        <p className="text-red-400/90">{error}</p>
                     </div>
                 </div>
             )}
