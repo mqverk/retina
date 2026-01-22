@@ -124,27 +124,27 @@ const CameraControls = ({
 
                 <button
                     onClick={handleCopy}
-                    className="group flex flex-col items-center gap-1.5 focus:outline-none"
+                    className="group flex flex-col items-center gap-2 focus:outline-none"
                 >
                     <div
-                        className={`w-14 h-14 md:w-16 md:h-16 rounded-full border backdrop-blur flex items-center justify-center transition-all ${
+                        className={`w-16 h-16 md:w-18 md:h-18 rounded-full border-2 backdrop-blur-md flex items-center justify-center transition-all duration-200 ${
                             isCopied
-                                ? 'border-green-400 bg-green-900/40 scale-110'
-                                : 'border-green-500/30 bg-black/40 group-hover:bg-green-900/30 group-hover:border-green-400'
+                                ? 'border-green-400 bg-green-900/50 scale-110 shadow-lg shadow-green-500/30'
+                                : 'border-green-500/40 bg-black/60 group-hover:bg-green-900/40 group-hover:border-green-400 group-hover:shadow-lg group-hover:shadow-green-500/20'
                         }`}
                     >
                         {isCopied ? (
                             <Check
-                                size={22}
+                                size={24}
                                 strokeWidth={2.5}
                                 className="text-green-400 animate-in fade-in zoom-in duration-200"
                             />
                         ) : (
-                            <Copy size={22} strokeWidth={1.5} className="text-white" />
+                            <Copy size={24} strokeWidth={1.8} className="text-white" />
                         )}
                     </div>
                     <span
-                        className={`text-[9px] md:text-[10px] tracking-widest font-bold transition-colors ${
+                        className={`text-[9px] md:text-[10px] tracking-widest font-bold transition-all ${
                             isCopied
                                 ? 'text-green-400'
                                 : 'opacity-70 group-hover:opacity-100 text-white'
