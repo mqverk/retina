@@ -81,12 +81,12 @@ const CameraControls = ({
                 {mode === 'photo' ? (
                     <button
                         onClick={onShot}
-                        className="group flex flex-col items-center gap-1.5 focus:outline-none"
+                        className="group flex flex-col items-center gap-2 focus:outline-none"
                     >
-                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] border-white/80 bg-white/10 backdrop-blur flex items-center justify-center group-hover:bg-white/20 group-hover:scale-105 transition-all group-active:scale-95">
-                            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white opacity-90 group-hover:opacity-100"></div>
+                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] border-white/90 bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:bg-white/20 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-white/20 transition-all duration-200 group-active:scale-95">
+                            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white opacity-90 group-hover:opacity-100 transition-opacity"></div>
                         </div>
-                        <span className="text-[9px] md:text-[10px] tracking-widest font-bold opacity-70 group-hover:opacity-100 text-white">
+                        <span className="text-[9px] md:text-[10px] tracking-widest font-bold opacity-70 group-hover:opacity-100 text-white transition-opacity">
                             CAPTURE
                         </span>
                     </button>
