@@ -226,7 +226,7 @@ function App() {
 
             {/* Clipboard Toast */}
             {clipboardSuccess && (
-                <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-black/80 border border-green-500 px-6 py-3 rounded text-green-400 font-bold backdrop-blur animate-in zoom-in duration-200">
+                <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-black/90 border-2 border-green-500 px-8 py-4 rounded-xl text-green-400 font-bold backdrop-blur-md shadow-2xl shadow-green-500/30 animate-in zoom-in duration-200">
                     ASCII COPIED TO CLIPBOARD
                 </div>
             )}
