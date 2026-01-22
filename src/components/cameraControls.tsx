@@ -93,13 +93,13 @@ const CameraControls = ({
                 ) : (
                     <button
                         onClick={onToggleRecording}
-                        className="group flex flex-col items-center gap-1.5 focus:outline-none"
+                        className="group flex flex-col items-center gap-2 focus:outline-none"
                     >
                         <div
-                            className={`w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] backdrop-blur flex items-center justify-center transition-all ${
+                            className={`w-20 h-20 md:w-24 md:h-24 rounded-full border-[3px] backdrop-blur-md flex items-center justify-center transition-all duration-200 ${
                                 isRecording
-                                    ? 'border-red-500 bg-red-900/30 group-hover:bg-red-900/40'
-                                    : 'border-red-500/80 bg-red-500/10 group-hover:bg-red-500/20 group-hover:scale-105 group-active:scale-95'
+                                    ? 'border-red-500 bg-red-900/40 shadow-xl shadow-red-500/30'
+                                    : 'border-red-500/90 bg-red-500/10 group-hover:bg-red-500/20 group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-red-500/20 group-active:scale-95'
                             }`}
                         >
                             <div
@@ -111,7 +111,7 @@ const CameraControls = ({
                             ></div>
                         </div>
                         <span
-                            className={`text-[9px] md:text-[10px] tracking-widest font-bold transition-colors ${
+                            className={`text-[9px] md:text-[10px] tracking-widest font-bold transition-all ${
                                 isRecording
                                     ? 'text-red-400 font-mono'
                                     : 'opacity-70 group-hover:opacity-100 text-white'
