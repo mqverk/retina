@@ -37,24 +37,24 @@ const CameraControls = ({
     }
 
     return (
-        <div className="pointer-events-none fixed inset-x-0 bottom-0 flex flex-col items-center pb-8 md:pb-10 gap-6">
-            <div className="pointer-events-auto flex items-center gap-1 bg-black/50 backdrop-blur-md rounded-full p-1 border border-green-500/30">
+        <div className="pointer-events-none fixed inset-x-0 bottom-0 flex flex-col items-center pb-10 md:pb-12 gap-7">
+            <div className="pointer-events-auto flex items-center gap-1.5 bg-black/60 backdrop-blur-md rounded-full p-1.5 border border-green-500/40 shadow-xl shadow-green-500/10">
                 <button
                     onClick={() => setMode('photo')}
-                    className={`px-6 py-2 rounded-full text-xs font-bold tracking-wider transition-all ${
+                    className={`px-7 py-2.5 rounded-full text-xs font-bold tracking-wider transition-all duration-200 ${
                         mode === 'photo'
-                            ? 'bg-green-600 text-black'
-                            : 'text-green-400 hover:text-green-300'
+                            ? 'bg-green-600 text-black shadow-lg shadow-green-600/30'
+                            : 'text-green-400 hover:text-green-300 hover:bg-green-900/20'
                     }`}
                 >
                     PHOTO
                 </button>
                 <button
                     onClick={() => setMode('video')}
-                    className={`px-6 py-2 rounded-full text-xs font-bold tracking-wider transition-all ${
+                    className={`px-7 py-2.5 rounded-full text-xs font-bold tracking-wider transition-all duration-200 ${
                         mode === 'video'
-                            ? 'bg-red-600 text-black'
-                            : 'text-red-400 hover:text-red-300'
+                            ? 'bg-red-600 text-black shadow-lg shadow-red-600/30'
+                            : 'text-red-400 hover:text-red-300 hover:bg-red-900/20'
                     }`}
                 >
                     VIDEO
